@@ -1,0 +1,32 @@
+
+
+<main role="main" class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+     <div class="lh-100">
+     
+    </div>
+  </div>
+  <div class="my-3 p-3 bg-white rounded box-shadow col-md-5 offset-3 mt-5">
+     <div class=" mt-5">
+      <h1 class="h3 mb-3 m-2 font-weight-normal">Please sign in</h1>
+    
+      <form class="form-signin text-center  " #loginForm="ngForm" name="loginForm">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control mb-2" placeholder="Email address" required="" autofocus="" (ngModel)="email"
+          name="email">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required="" (ngModel)="password">
+        <div class="checkbox mb-3">
+          <label>
+          <input type="checkbox" value="remember-me" [checked]="false" (change)="rememberMe = !rememberMe" name="rememberMe" (ngModel)="rememberMe"> Remember me
+         </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block mb-5" type="submit" (click)='login(loginForm.value)'>Sign in</button>
+    
+      </form>
+    </div>
+    
+
+  </div>
+
+</main>

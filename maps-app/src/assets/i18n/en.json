@@ -1,0 +1,21 @@
+{
+  "dir": "ltr",
+  "setings": {
+    "TITLE": "Settings",
+    "SELECT": "Change language",
+    "exit": "Logout"
+   },
+     "HOME": {
+    "TITLE": "Map View",
+    "homePage":"Last Login Date"
+
+   }
+   ,
+  "nave": {
+    "home": "Home",
+    "setings": "Settings",
+    "map":"Map",
+    "TITLE":"Map Task"
+
+  }
+}

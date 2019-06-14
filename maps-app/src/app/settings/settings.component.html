@@ -1,0 +1,36 @@
+<main role="main" class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+    <div class="lh-100">
+
+    </div>
+  </div>
+  <div class="my-3 p-3 bg-white rounded box-shadow col-md-5 offset-3 mt-5">
+    <div class=" mt-5">
+      <table style="width:100%">
+      
+        <tr>
+          <td>
+            <div dir="{{ 'dir' | translate }}" [class.rtl]="('dir' | translate) === 'rtl'">
+              <h2>{{ 'setings.TITLE' | translate }}</h2>
+              <label>
+                {{ 'setings.SELECT' | translate }}
+                <select #langSelect (change)="translate.use(langSelect.value)">
+                  <option *ngFor="let lang of translate.getLangs()" [value]="lang"
+                    [selected]="lang === translate.currentLang">{{ lang }}</option>
+                </select>
+              </label>
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <th> <button class="btn btn-primary" (click)="logOut()">{{'setings.exit' | translate}}</button></th>
+
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+
+</main>
