@@ -49,9 +49,10 @@ export class LoginService {
     localStorage.removeItem('lastLogin');
     localStorage.setItem('lastLogin', localStorage.getItem('newLogin'));
     localStorage.removeItem('newLogin')
+    this.router.navigate(['/login']);
     if (localStorage.getItem('rememberMe') == 'true') {
       localStorage.removeItem('rememberMe');
-      this.router.navigate(['/login']);
+     
       return localStorage.removeItem('userToken');
     } else {
       return sessionStorage.clear();
