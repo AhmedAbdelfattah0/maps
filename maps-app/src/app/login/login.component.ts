@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  email
+  password
+  rememberMe
   constructor(
     private _loginService: LoginService,
     private router: Router,
